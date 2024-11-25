@@ -1,0 +1,19 @@
+data/*
+!data/README.md
+
+results/*
+!results/README.md
+
+src/evaluation/*
+!src/evaluation/README.md
+
+# Data batches and training results of TWiX
+src/association/twix/data/*
+src/association/twix/rsta/*
+src/association/twix/rlta/*
+
+# Compiled and cached files
+*.pyc
+.vscode
+*__pycache__
+doc/*
