@@ -14,7 +14,7 @@ cd TWiX
 conda create -n twix python=3.10.12
 conda activate twix
 conda install pytorch==2.4.1 torchvision==0.19.1 pytorch-cuda=12.4 -c pytorch -c nvidia
-pip install numpy==2.1.3 pandas==2.2.2 matplotlib==3.8.4 seaborn==0.13.2 opencv-python==4.10.0.84 einops==0.8.0 pycocotools==2.0.8 tensorboard==2.18.0 tqdm prettytable notebook loguru pyyaml
+pip install numpy==2.1.3 pandas==2.2.2 matplotlib==3.8.4 seaborn==0.13.2 opencv-python==4.10.0.84 einops==0.8.0 pycocotools==2.0.8 tensorboard==2.18.0 scipy==1.14.1 tqdm prettytable notebook loguru pyyaml
 ```
 
 ## Evaluation with TrackEval

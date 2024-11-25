@@ -33,6 +33,8 @@ We propose a novel Transformer-based module to address the data association prob
 2. Follow the instructions in [data/README.md](data/README.md) to download the MOT17, DanceTrack and KITTIMOT datasets
 3. For downloading detections on these datasets, refer to [results/README.md](results/README.md)
 
+Alternatively, you can run the project on MOT17 directly inside Google Colab: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1qr-G86eA4xs53CrT-WTXD8KVOU57salE?usp=sharing)
+
 ## Training
 
 To train a TWiX module, please follow these steps:

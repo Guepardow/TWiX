@@ -130,14 +130,14 @@ def main(opts, tensorboard):
     validation_data = DatasetTWiX.load(f"data/{opts.dataset}/{opts.tracklet_name}/data_{opts.subset_val}_{opts.strategy}_{opts.max_gap:0.2f}_{opts.WP}_{opts.WF}.pt")
 
     # Model
-    model = TWiX(d_model=opts.d_model, nhead=opts.nhead, dim_feedforward=opts.dim_feedforward, num_layers=opts.num_layers, dropout=opts.dropout, inter_pair=opts.inter_pair)
+    model = TWiX(d_model=opts.d_model, nhead=opts.nhead, dim_feedforward=opts.dim_feedforward, num_layers=opts.num_layers, dropout=opts.dropout, inter_pair=opts.inter_pair, device=DEVICE)
     model.to(DEVICE)
     n_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f"Number of parameters: {n_parameters}")
 
     # Define loss function, optimizer and learning rate scheduler
     optimizer = optim.Adam(model.parameters(), lr=opts.lr)
-    criterion = BidirectionalContrastiveLoss(tau=opts.tau, B=opts.B)
+    criterion = BidirectionalContrastiveLoss(tau=opts.tau, B=opts.B, device=DEVICE)
     scheduler = CosineAnnealingLR(optimizer, opts.n_epoch, eta_min=0)
 
     # Create a DataLoader for batching and shuffle the data for training and validation

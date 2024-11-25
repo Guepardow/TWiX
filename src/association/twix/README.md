@@ -45,7 +45,7 @@ tensorboard --logdir .
 
 # Data for MOT17, KITTIMOT, DanceTrack
 wget https://mehdimiah.com/static/twix/data.zip
-!unzip data.zip -d data/
+unzip data.zip -d data/
 rm data.zip
 
 # TWiX weights for MOT17, KITTIMOT, DanceTrack

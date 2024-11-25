@@ -14,6 +14,8 @@ sys.path.append('../..')
 from datasets import init_scene
 from structures.tracker import Tracker
 
+DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
 
 def get_parser():
     parser = argparse.ArgumentParser(description="Create data for learning association")
@@ -55,7 +57,7 @@ def get_window_size(W: str, fps: float) -> int:
 
 class DatasetTWiX(Dataset):
 
-    def __init__(self, dataset: str, subset: str, folder_tracklets: str, max_gap: float, strategy: str, WP: str, WF: str, device='cuda'):
+    def __init__(self, dataset: str, subset: str, folder_tracklets: str, max_gap: float, strategy: str, WP: str, WF: str, device=DEVICE):
         """
         Create a list of batches made of two sets of tracklets
 
