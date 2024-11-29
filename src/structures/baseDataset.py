@@ -92,8 +92,6 @@ class BaseDataset:
         self.height = None
         self.fps = None
         self.list_frames = None
-        self.first_frame = None
-        self.last_frame = None
 
         self.unload_oracle_infos()
 
