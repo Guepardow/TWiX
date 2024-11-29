@@ -33,7 +33,7 @@ git clone https://github.com/DanceTrack/DanceTrack.git
 # Download the data with the ground truth (150 MB)
 cd TrackEval
 wget https://omnomnom.vision.rwth-aachen.de/data/TrackEval/data.zip
-unzip data.zip
+unzip -q data.zip ; rm data.zip
 ```
 
 ### Patches on TrackEval and DanceTrack

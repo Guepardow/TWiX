@@ -14,7 +14,7 @@ def get_parser():
     parser.add_argument('--dataset', type=str, help="Multiple object tracking dataset")
     parser.add_argument('--subset', type=str, help="Subset of the dataset")
     parser.add_argument('--scene', type=str, default=None, help="Scene's name")
-    parser.add_argument('--detector', type=str, help="Detector's name")
+    parser.add_argument('--detection', type=str, help="Detector's name")
 
     return parser
 
@@ -22,7 +22,7 @@ def get_parser():
 if __name__ == '__main__':
 
     args = get_parser().parse_args()
-    path_to_folder = Path(f"../../results/{args.dataset}-{args.subset}/Detection/{args.detector}")
+    path_to_folder = Path(f"../../results/{args.dataset}-{args.subset}/Detection/{args.detection}")
 
     scene = init_scene(args.dataset, args.subset)
     list_scenes = scene.list_scenes if args.scene is None else [args.scene]

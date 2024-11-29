@@ -10,12 +10,12 @@ To visualize the detections, please run:
 
 ```bash
 # One scene of DanceTrack-train with the detector bytetrack_model
-python viz_detections.py --dataset DanceTrack --subset train --detector bytetrack_model --scene dancetrack0001
+python viz_detections.py --dataset DanceTrack --subset train --detection bytetrack_model --scene dancetrack0001
 
 # All scenes of DanceTrack-train with the detector bytetrack_model
-python viz_detections.py --dataset DanceTrack --subset train --detector bytetrack_model
+python viz_detections.py --dataset DanceTrack --subset train --detection bytetrack_model
 ```
-The videos are stored in the folder `<PATH_BASE>/results/<dataset>-<subset>/Detection/<detector>`.
+The videos are stored in the folder `<PATH_BASE>/results/<dataset>-<subset>/Detection/<detection>`.
 
 ## Tracker
 
